@@ -8,6 +8,7 @@ package ch03_operator;
  */
 public class Operator01 {
     public static void main(String[] args) {
+        // operator : 연산자
         // 변수 선언 및 초기화
         int i = 10;
 
