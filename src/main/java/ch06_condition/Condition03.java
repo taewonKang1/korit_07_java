@@ -47,7 +47,7 @@ public class Condition03 {
         String userGrade = "";
         if (point > 80) {
             userGrade = "VIP";
-        } else if (point > 60) {
+    } else if (point > 60) {
             userGrade = "GOLD";
         } else if (point > 40) {
             userGrade = "SILVER";
