@@ -11,53 +11,50 @@ public class Method02 {
     // 받을 예정이기 때문에
     public static String getStar(int rows, int option) {
         String result = "";
-        switch (option) {
-            case 1:
-                for(int i = 0; i < rows + 1; i++) {
-                    for (int k = 0; k < i; k++) {
-                        System.out.print("*");
-                    }
-                    for (int j = rows - i; j > 0; j--) {
-                        System.out.print(" ");
-                    }
-                    System.out.println();
+        if(option == 1) {
+            for (int i = 0; i < rows + 1; i++) {
+                for (int j = 0; j < i; j++) {
+                    result += "*";
                 }
-                break;
-            case 2:
-                for(int i = 0; i < rows + 1; i++) {
-                    for (int j = rows - i; j > 0; j--) {
-                        System.out.print(" ");
-                    }
-                    for (int k = 0; k < i; k++) {
-                        System.out.print("*");
-                    }
-                    System.out.println();
+                result += "\n";
+            }
+        } else if (option == 2) {
+            for(int i = 0; i < rows + 1; i++) {
+                for (int j = rows - i; j > 0; j--) {
+                    result += " ";
                 }
-                break;
-            case 3:
-                for(int i = 0; i < rows + 1; i++) {
-                    for (int j = rows - i; j > 0; j--) {
-                        System.out.print("*");
-                    }
-                    for (int k = 0; k < i; k++) {
-                        System.out.print(" ");
-                    }
-                    System.out.println();
+                for (int k = 0; k < i; k++) {
+                    result += "*";
                 }
-                break;
-            case 4:
-                for(int i = 0; i < rows + 1; i++) {
-                    for (int k = 0; k < i; k++) {
-                        System.out.print(" ");
-                    }
-                    for (int j = rows - i; j > 0; j--) {
-                        System.out.print("*");
-                    }
-                    System.out.println();
+                result += "\n";
+            }
+        } else if (option == 3) {
+            for(int i = 0; i < rows + 1; i++) {
+                for (int j = rows - i; j > 0; j--) {
+                    result += "*";
                 }
-                break;
+                for (int k = 0; k < i; k++) {
+                    result += " ";
+                }
+                result += "\n";
+            }
+        } else if (option == 4) {
+            for(int i = 0; i < rows + 1; i++) {
+                for (int k = 0; k < i; k++) {
+                    result += " ";
+                }
+                for (int j = rows - i; j > 0; j--) {
+                    result += "*";
+                }
+                result += "\n";
+            }
+        } else {
+            result = "해당 기능이 없습니다";
         }
+
         // 이 사이에 별찍기 관련 로직이 들어갈 예정입니다.
+        // 이제 주의할 점은 sout이 아니라 return 타입이 고정되어있다는 점입니다.
+        // 이 때문에 별찍기 로직을 그대로 가져오기는 하지만 sout으로 출력해서는 안됩니다.
         return result;
     }
 
