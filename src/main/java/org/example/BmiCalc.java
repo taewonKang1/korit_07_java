@@ -92,6 +92,8 @@ public class BmiCalc {
 //        }
 //
 //        System.out.println(name + "님의 BMI 지수는 " + bmi + "으로 " + bmiStatus + "입니다.");
+        BmiCalc bmiCalc = new BmiCalc();
+        bmiCalc.calcBmi("김이", 174, 64);
 
         Person person1 = Person.builder()
                 .name("강태원")
